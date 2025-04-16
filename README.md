@@ -13,12 +13,12 @@
 <ul>
   <li>
     <h6>Create Virtual Environment</h6>
-    <p>python -m venv <venv_name></p>
+    <p>python -m venv venv_name</p>
   </li>
 
   <li>
     <h6>Run Virtual Environment</h6>
-    <p>. <venv_name>/Scripts/activate</p>
+    <p>. venv_name/Scripts/activate</p>
   </li>
 <li>
   python -m install -r requirements.txt
