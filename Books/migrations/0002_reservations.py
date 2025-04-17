@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('copies', models.PositiveBigIntegerField(default=0)),
                 ('contact', models.PositiveIntegerField(default=0)),
                 ('reservation_date', models.DateField()),
-                ('status', models.BooleanField(default='Pending')),
+                ('status', models.BooleanField(default='False')),
                 ('book', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='reserved_book', to='Books.books')),
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='reserve', to=settings.AUTH_USER_MODEL)),
             ],
