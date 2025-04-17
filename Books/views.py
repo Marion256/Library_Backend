@@ -160,7 +160,7 @@ def UserReservations(request, user_id):
      try:
           user = User.objects.prefetch_related('reserve', 'reserve__book').get(id=user_id)
      except User.DoesNotExist:
-          return Response({"err:user not found"})
+         return Response({"error": "Book not found"}, status=status.HTTP_404_NOT_FOUND)
      if request.method == 'GET':
           serializer = UserReservationSerializer(user)
           return Response(serializer.data, status=status.HTTP_200_OK)
